@@ -17,13 +17,15 @@
     <title>Landing Page</title>
 </head>
 
-<body class="main-bg">
+<body>
 
+  <input id="close-menu" class="close-menu" type="checkbox" aria-label="Close menu" role="button">
+  <label class="close-menu-label" for="close-menu" title="close menu"></label>
    <aside class="menu white-bg">
     <div class="main-content menu-content">
-       <h1><a href="#">LOGO</a></h1>
+       <h1  onclick="getElementById('close-menu').checked=false;"><a href="#">LOGO</a></h1>
        <nav>
-        <ul>
+        <ul onclick="getElementById('close-menu').checked=false;">
             <li>
                 <a href="#intro">Intro</a>
             </li>
@@ -31,13 +33,13 @@
                 <a href="#grid-one">Top 3</a>
             </li>
             <li>
-                <a href="#">Gallery</a>
+                <a href="#gallery">Gallery</a>
             </li>
             <li>
-                <a href="#">Work</a>
+                <a href="#Pricing">Pricing</a>
             </li>
             <li>
-                <a href="#">Contact</a>
+                <a href="#contact">Contact</a>
             </li>
             
         </ul>
@@ -96,7 +98,139 @@
         </div>
     </section>
    
+
+    <section id="gallery" class="grid-one white-bg section">
+        <div class=" main-content grid-one-content">
+            <h2 class="grid-main-heading">Gallery</h2>
+            <p class="grid-description">Uma breve descrição.</p>
+            
+            <div class="grid">
+                    <div class="gallery-img">
+                        <img src="http://source.unsplash.com/random/360x360" alt="Random image from unsplash">
+                    </div>
+                    <div class="gallery-img">
+                        <img src="http://source.unsplash.com/random/360x360?r=1" alt="Random image from unsplash">
+                    </div>
+                    <div class="gallery-img">
+                        <img src="http://source.unsplash.com/random/360x360?r=2" alt="Random image from unsplash">
+                    </div>
+                    <div class="gallery-img">
+                        <img src="http://source.unsplash.com/random/360x360?r=3" alt="Random image from unsplash">
+                    </div>
+                    <div class="gallery-img">
+                        <img src="http://source.unsplash.com/random/360x360?r=4" alt="Random image from unsplash">
+                    </div>
+                    <div class="gallery-img">
+                        <img src="http://source.unsplash.com/random/360x360?r=5" alt="Random image from unsplash">
+                    </div>
+              </div>
+        </div>
+    </section>
+
+    <section id="Pricing" class="white-bg section">
+        <div class="main-content top3-content">
+          <h2>Pricing</h2>
+          <p>The release of Apple Silicon-based Macs at the end of last year generated a flurry of news coverage and some
+            surprises at the machine’s performance. This post details some background information on the experience of
+            porting Firefox to run natively on these CPUs.</p>
+          <p>We’ll start with some background on the Mac transition and give an overview of Firefox internals that needed to
+            know about the new architecture, before moving on to the concept of Universal Binaries.</p>
+    
+          <div class="responsive-table">
+            <table>
+              <caption>Pricing table</caption>
+    
+              <thead>
+                <tr>
+                  <th>Title 1</th>
+                  <th>Title 2</th>
+                  <th>Title 3</th>
+                  <th>Title 4</th>
+                  <th>Title 5</th>
+                </tr>
+              </thead>
+    
+              <tbody>
+                <tr>
+                  <td>Content 1</td>
+                  <td>Content 2</td>
+                  <td>Content 3</td>
+                  <td>Content 4</td>
+                  <td>Content 5</td>
+                </tr>
+                <tr>
+                  <td>Content 1</td>
+                  <td>Content 2</td>
+                  <td>Content 3</td>
+                  <td>Content 4</td>
+                  <td>Content 5</td>
+                </tr>
+                <tr>
+                  <td>Content 1</td>
+                  <td>Content 2</td>
+                  <td>Content 3</td>
+                  <td>Content 4</td>
+                  <td>Content 5</td>
+                </tr>
+              </tbody>
+    
+              <tfoot>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>Total</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </section>
    
+
+      <section id="contact"  class="intro main-bg section">
+        <div class="main-content intro-content">
+            <div class="contact-form">
+                <fieldset class="form-grid">
+                    <legend>Contact me </legend>
+
+                    <div class="form-group">
+                        <label for="first-name">First name</label>
+                        <input type="text" name="first-name" id="first-name" placeholder="Your Name"> 
+                    </div>
+
+                    <div class="form-group">
+                        <label for="last-name">Last name</label>
+                        <input type="text" name="last-name" id="last-name"  placeholder="Your Last name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email"  placeholder="Your Email">
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <button type="submit">Send message</button>
+                    </div>
+                    
+                </fieldset>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer" class="footer white-bg ">
+        <p>V H T</p>
+        <a class="Back-To-Top" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+          <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+        </svg></a>
+    </footer>
+
 </body>
 
 </html>
